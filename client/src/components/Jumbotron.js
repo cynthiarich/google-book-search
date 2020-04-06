@@ -2,10 +2,12 @@ import React from 'react';
 import Search from "./Search";
 
 const Jumbotron = () => {
+    let page = "search"
     let title = "Google Book Search"
     let tagline = "Find books you'll love. Save them for later."
     
     if (window.location.href.includes("saved")){
+        page = "saved"
         title = "Your Reading List"
         tagline = "Here are the books you saved for later"
     }

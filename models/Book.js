@@ -9,7 +9,7 @@ const bookSchema = new Schema({
   averageRating: Number,
   ratingsCount: Number,
   image: String,
-  infolink: String,
+  infoLink: String,
   dateSaved: { type: Date, default: Date.now }
 });
 

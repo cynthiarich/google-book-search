@@ -12,7 +12,8 @@ module.exports = {
     },
 
     saveBook: (req, res) => {
-       db.Book
+      console.log(req.body) 
+      db.Book
         .create(req.body)
         .then(data => res.json(data))
         .catch(err => res.json(err));
