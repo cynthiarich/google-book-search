@@ -5,7 +5,7 @@ import ListContainer from '../components/ListContainer';
 import SearchContext from '../utils/SearchContext';
 
 const Books = () => {
-
+    //add a new state for results
     const [searches, setSearch] = useState({
         search: "",
         results: [],
@@ -26,8 +26,6 @@ const Books = () => {
             });
         },
         onFavorite: (book) => {
-            console.log("============what we're sending to mongo===========");
-            console.log(book);
             API.saveBook(book)
                 .then(res => {
                     console.log(res);
@@ -35,6 +33,8 @@ const Books = () => {
         }
     })
 
+    //move functions out of searches
+    
     return (
         <SearchContext.Provider value={searches}>
             <Jumbotron />
