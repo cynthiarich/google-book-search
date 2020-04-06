@@ -37,7 +37,7 @@ const Saved = () => {
 
     return (
         <SearchContext.Provider value={searches}>
-            <Jumbotron page="saved" />
+            <Jumbotron />
             <ListContainer />
         </SearchContext.Provider>
 
