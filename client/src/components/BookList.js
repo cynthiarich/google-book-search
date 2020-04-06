@@ -21,7 +21,7 @@ const BookList = () => {
                             </div>
                             <div className="col-md-9">
                                 <div className="card-body">
-                                    <h5 className="card-title"><a href={book.infoLink}>{book.title}</a><button type="button" className="btn btn-light" onClick={() => onFavorite(book)}><span className="text-danger"><i className="fa fa-heart-o"></i></span></button></h5>
+            <h5 className="card-title"><a href={book.infoLink}>{book.title}</a><button type="button" className="btn btn-light ml-3" onClick={() => onFavorite(book)}><span className="text-danger">{window.location.href.includes("saved") ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</span></button></h5>
                                     <p className="card-text"><strong>Description:</strong></p> 
                                     {book.description ? <TruncateText lines={3} text={book.description} infoLink={book.infoLink}/> 
                                     : <p>No description available</p>}

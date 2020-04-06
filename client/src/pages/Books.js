@@ -37,7 +37,7 @@ const Books = () => {
 
     return (
         <SearchContext.Provider value={searches}>
-            <Jumbotron />
+            <Jumbotron page="search"/>
             <ListContainer />
         </SearchContext.Provider>
 

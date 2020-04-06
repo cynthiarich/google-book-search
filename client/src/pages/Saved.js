@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import API from '../utils/API';
 import ListContainer from '../components/ListContainer';
 import SearchContext from '../utils/SearchContext';
+import Jumbotron from '../components/Jumbotron';
 
 const Saved = () => {
     
@@ -36,6 +37,7 @@ const Saved = () => {
 
     return (
         <SearchContext.Provider value={searches}>
+            <Jumbotron page="saved" />
             <ListContainer />
         </SearchContext.Provider>
 
